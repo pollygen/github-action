@@ -1,6 +1,7 @@
 import express, {Request, Response, text} from 'express';
 import {data} from "./data";
 
+
 const app = express();
 app.use(text());
 
