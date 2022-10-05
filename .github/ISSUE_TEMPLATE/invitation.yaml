@@ -1,7 +1,7 @@
-name: Invitation to the GitHub Campus IITM
-description: I would like to be part of the awesome community
+name: Try out creating an issue!
+description: This issue will demonstrate how github actions can be used to send automated emails...
 title: "Please invite me to the GitHub Community Organization"
-labels: [Invitation]
+labels: [invitation]
 body:
   - type: input
     id: name
@@ -11,16 +11,9 @@ body:
     validations:
       required: true
   - type: input
-    id: discordname
+    id: smail_id
     attributes:
       label: Smail ID
       placeholder: Insert your Smail ID here
-    validations:
-      required: true
-  - type: textarea
-    id: Additional
-    attributes:
-      label: Additional Context
-      description: What do you like about this community/Why do you want to join?
     validations:
       required: true
