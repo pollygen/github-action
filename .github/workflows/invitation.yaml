@@ -4,14 +4,12 @@ on:
     
 jobs:
   InvitationMail:
-    if: ${{ github.event.label.name == 'Invitation' }}
+    if: ${{ github.event.label.name == 'invitation' }}
     runs-on: ubuntu-latest
     steps:
       - name: Issue Parser
         uses: stefanbuck/github-issue-parser@v2
         id: issue-parser
-        with:
-          template-path: .github/ISSUE_TEMPLATE/invitation.yaml
          
       - name: Email Parsing
         id: mail
@@ -36,5 +34,12 @@ jobs:
           ignore_cert: true
           convert_markdown: true
           priority: low
+          
+      - name: Close Issue
+        uses: peter-evans/close-issue@v2
+        with:
+          issue-number: ${{ github.event.id }}
+          comment: Auto-closing issue
+        
           
           
