@@ -4,7 +4,7 @@ on:
     
 jobs:
   InvitationMail:
-    if: ${{ github.event.label.name == 'invitation' }}
+    if: ${{ github.event.label.name == 'Invitation' }}
     runs-on: ubuntu-latest
     steps:
       - name: Issue Parser
